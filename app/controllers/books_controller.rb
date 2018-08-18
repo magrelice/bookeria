@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
 	# GET 
 	def index
-		@book = Book.all #lista de todos os livros do banco de dados 
+		@books = Book.all #lista de todos os livros do banco de dados 
 	end
 
 	# GET 
@@ -14,7 +14,7 @@ class BooksController < ApplicationController
 		@book = Book.new(books_params) # crio um objeto com os dados que vieram do usuário 
 		@book.save # salvo no banco de dados e ele vai criar um ID no banco de dados 
 
-		#
+
 		redirect_to @book
 	end
 
